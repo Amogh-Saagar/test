@@ -1,7 +1,6 @@
 while True:
 	i = str(input())
-	file1 = open("questions.txt", "a")
-	file1.writelines(i)
+	
 	canswers = str(input())
 	answers1 = str(input())
 	answers2 = str(input())
@@ -10,5 +9,7 @@ while True:
 	answers1 = "-".join(answers1.split())
 	answers2 = "-".join(answers2.split())
 	answers3 = "-".join(answers3.split())
-	file1 = open("questions.txt", "a")
-	file1.writelines(f"[{canswers}] {answers1} {answers2} {answers3}")
+	send = i + '\n' + f"[{canswers}]" + answers1 + answers2 + answers3 + '\n'
+	print(send)
+	with open("questions.txt", "a") as f:
+		f.writelines(send)
