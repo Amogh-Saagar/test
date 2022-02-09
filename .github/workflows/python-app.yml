@@ -15,4 +15,6 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-    - run: python3 -m cd../../setup build
+    - run: cd ..
+    - run: cd ..
+    - run: python3 -m setup build
