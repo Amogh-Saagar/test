@@ -1,2 +1,2 @@
-print("Hello")
-print('i am here')
+mcq = open("questions/questions.txt", "r")
+
